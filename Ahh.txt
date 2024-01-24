@@ -5459,7 +5459,6 @@ end)
   
     Main:AddToggle("Fast Attack",true,function(value)
         _G.FastAttack = value
-        AttackNoCD()
     end)      
     Main:AddToggle("Ultra Fast Attack",true,function()
         local SuperFastMode = true 
