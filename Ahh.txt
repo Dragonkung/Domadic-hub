@@ -5457,10 +5457,11 @@ spawn(function()
 end)
 
   
-    Main:AddToggle("Fast Attack",false,function(value)
+    Main:AddToggle("Fast Attack",true,function(value)
         _G.FastAttack = value
+        AttackNoCD()
     end)      
-    Main:AddToggle("Ultra Fast Attack",false,function()
+    Main:AddToggle("Ultra Fast Attack",true,function()
         local SuperFastMode = true 
 
 local plr = game.Players.LocalPlayer
