@@ -5461,21 +5461,12 @@ end)
         _G.FastAttack = value
     end)      
 
-    Main:AddToggle("Ultra Fast Attack",function()
-        local SuperFastMode = true 
+    Main:AddToggle("Fast Attack Super Fast [Trun on Fast Attack to use!!] ",_G.NotDeley,function(value)
+        _G.NotDeley = value
+    end)      
 
-local plr = game.Players.LocalPlayer
 
-local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
-local CbFw2 = CbFw[2]
-
-function GetCurrentBlade() 
-    local p13 = CbFw2.activeController
-    local ret = p13.blades[1]
-    if not ret then return end
-    while ret.Parent~=game.Players.LocalPlayer.Character do ret=ret.Parent end
-    return ret
-end
+--attacknocd
 function AttackNoCD() 
     local AC = CbFw2.activeController
     for i = 1, 1 do 
@@ -5523,21 +5514,9 @@ function AttackNoCD()
         end
     end
 end
-local cac
-if SuperFastMode then 
-	cac=task.wait
-else
-	cac=wait
-end
-while cac() do 
-	AttackNoCD()
-end
-    end)      
+--end
 
-    Main:AddToggle("Fast Attack Super Fast [Trun on Fast Attack to use!!] ",_G.NotDeley,function(value)
-        _G.NotDeley = value
-    end)      
-    
+
 local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
 CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
 y = debug.getupvalues(CombatFrameworkR)[2]
@@ -5557,6 +5536,7 @@ spawn(function()
                     y.activeController.blocking = false
                     y.activeController.attacking = false
                     y.activeController.humanoid.AutoRotate = true
+AttackNoCD()
                 end)
             end
         end
