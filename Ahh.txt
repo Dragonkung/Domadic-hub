@@ -1,4 +1,4 @@
-print("คุณมึงก็ใช้เป็น loadingstringสิ")
+
 local ScreenGui1 = Instance.new("ScreenGui")
 local ImageButton1 = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -5460,7 +5460,8 @@ end)
     Main:AddToggle("Fast Attack",true,function(value)
         _G.FastAttack = value
     end)      
-    Main:AddToggle("Ultra Fast Attack",true,function()
+
+    Main:AddToggle("Ultra Fast Attack",function()
         local SuperFastMode = true 
 
 local plr = game.Players.LocalPlayer
