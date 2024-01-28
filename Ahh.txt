@@ -1,4 +1,5 @@
-    if _G.ReducedCPU == true then
+    -- ตั้งค่าภาษาตามตัวแปร _G.ScriptLanguage
+if _G.ReducedCPU == "Fix3" then
      game:GetService("Lighting").FantasySky:Destroy()
             local g = game
             local w = g.Workspace
@@ -97,8 +98,9 @@ print("Reduce CPU load!")
 		end
 	end
 	else
-    print("ไม่ต้องรันฟังก์ชันเนื่องจาก _G.ReducedCPU เป็น false")
+    print("Hello")
 end
+
 
 
 local ScreenGui1 = Instance.new("ScreenGui")
