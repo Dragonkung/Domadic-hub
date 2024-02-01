@@ -1,5 +1,5 @@
-    -- ตั้งค่าภาษาตามตัวแปร _G.ScriptLanguage
-if _G.ReducedCPU == "Fix3" then
+
+if _G.ReducedCPUMode == "Ultra" then
      game:GetService("Lighting").FantasySky:Destroy()
             local g = game
             local w = g.Workspace
